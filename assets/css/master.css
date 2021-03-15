@@ -4,3 +4,18 @@ body{
 	padding: 0;
 	background-color: rgb(66, 0, 66);
 }
+.random-numbers, .player-numbers, .result{
+	font-size: 40px;
+	color: white;
+}
+.result-numbers > .indovinato{
+	color: greenyellow;
+	font-size: 40px;
+	display: inline;
+}
+.result-numbers > .fallito{
+	font-size: 40px;
+	color: red;
+	display: inline;
+
+}
