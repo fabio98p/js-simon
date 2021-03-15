@@ -41,7 +41,7 @@ $(".begin").click(function () {
 					else {
 						userNumber = parseInt(prompt("hai sbagliato a scrivere, scrivi un altro numero da 1 a 10", "1"));
 					}
-				} while (playerNumber.includes(userNumber) || isNaN(userNumber) || userNumber < 1 || userNumber >= 10);
+				} while (playerNumber.includes(userNumber) || isNaN(userNumber) || userNumber < 1 || userNumber > 10);
 				playerNumber.push(userNumber)
 			}
 			//stampare numeri iniziali, i numeri scritti e infine quali erano corretti o e quali no, in questo caso li distinguo tra rosso e verde
