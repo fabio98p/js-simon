@@ -3,18 +3,23 @@
 // Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei numeri da indovinare sono stati individuati.
 console.log("ciao Ale");
 
-//genera 5 numeri casualmente es. da 1 a 10
-var randomNumber = [];
-var number = "";
-for (let i = 0; i < 5; i++) {
-	do {
-		number = random(1, 10 + 1);
-	} while (randomNumber.includes(number));
-	randomNumber.push(number);
-}
-console.log(randomNumber, "randomnumber");
-//stampa i 5 numeri sul html e avvia un timer di 30s o 3 per comodita
 $(".begin").click(function () {
+	//azzeramento per poter rigiocare se si vuole
+	$(".result-numbers").html("");
+	$(".random-numbers").html("")
+	$(".player-numbers").html("")
+	$(".result").html("")
+	
+	//genera 5 numeri casualmente es. da 1 a 10
+	var randomNumber = [];
+	var number = "";
+	for (let i = 0; i < 5; i++) {
+		do {
+			number = random(1, 10 + 1);
+		} while (randomNumber.includes(number));
+		randomNumber.push(number);
+	}
+	//stampa i 5 numeri sul html e avvia un timer di 30s o 3 per comodita
 	$(".random-numbers").html(randomNumber.toString())
 	setTimeout(function () {
 		$(".random-numbers").html("")
